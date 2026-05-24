@@ -1,21 +1,17 @@
-import src.main.java.Counter;
+package src.main.java;
 
 public class Driver {
-
 	public static void main(String[] args) {
-		
 		Counter counter = new Counter();
-		
-		System.out.println("Count:" + counter.getCount());
-		
+
+		printCount(counter);
 		counter.increment();
-		
-		System.out.println("Count:" + counter.getCount());
-		
+		printCount(counter);
 		counter.decrement();
-		
-		System.out.println("Count:" + counter.getCount());
-		
+		printCount(counter);
 	}
 
+	private static void printCount(Counter counter) {
+		System.out.println("Count: " + counter.getCount());
+	}
 }
